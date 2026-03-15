@@ -59,7 +59,8 @@ Core/Src/sysmem.c \
 Core/Src/syscalls.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c \
 Core/Src/command_line.c \
-Core/Src/motor.c
+Core/Src/motor.c \
+Core/Src/os.c
 
 # ASM sources
 ASM_SOURCES =  \
@@ -144,7 +145,8 @@ CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)"
 # LDFLAGS
 #######################################
 # link script
-LDSCRIPT = STM32F401XX_FLASH.ld
+#LDSCRIPT = STM32F401XX_FLASH.ld
+LDSCRIPT = STM32F401CCUx_FLASH.ld
 
 # libraries
 LIBS = -lc -lm -lnosys 
